@@ -13,6 +13,10 @@
 
 Route::get('/', 'HomeController@index')->name('home');
 
+Route::get('/comments', 'CommentsController@index');
+Route::get('/comments/create', 'CommentsController@create');
+Route::post('/comments', 'CommentsController@store');
+
 Route::get('/login', 'SessionsController@create')->name('login');
 Route::post('/login', 'SessionsController@store');
 Route::get('/logout', 'SessionsController@destroy');
