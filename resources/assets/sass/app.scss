@@ -1,9 +1,50 @@
-
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 
-// Variables
-@import "variables";
+
 
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+.b-header {
+	background: #9bcf9e;
+}
+
+.b-header__logo {
+	text-align: center; padding-top: 5px; padding-bottom: 5px;
+}
+
+.b-header__title {
+	padding-top: 8px;
+	padding-bottom: 5px;
+	text-align: center;
+	font-family: Century Gothic;
+	line-height: 30px;
+	color: #fff;
+}
+
+.b-carousel__line {
+	background: #ccc;
+}
+
+.b-carousel {
+	padding: 0px;
+}
+
+.b-order {
+	background: #e0dece;
+	padding: 20px 30px;
+}
+
+.b-info-cercleimg {
+	text-align: center;
+}
+
+.separator-line {
+	margin: 40px 0;
+}
+
+.title_line {
+	text-align: center;
+	margin-bottom: 15px;
+}
