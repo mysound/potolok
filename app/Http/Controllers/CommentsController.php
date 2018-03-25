@@ -12,6 +12,12 @@ class CommentsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['index', 'create', 'store']]);
+    }
+
     public function index()
     {
         $comments = Comment::latest()->where('confirmed', true)->get();
@@ -49,6 +55,12 @@ class CommentsController extends Controller
         return redirect('/');
     }
 
+    public function allcomm()
+    {
+        $comments = Comment::latest()->get();
+        return view('settings.comments.index', compact('comments'));
+    }
+
     /**
      * Display the specified resource.
      *
@@ -60,15 +72,26 @@ class CommentsController extends Controller
         //
     }
 
+    public function publish(Request $request, Comment $comment)
+    {
+        if ($comment->confirmed) {
+            $comment->confirmed = false;
+        } else {
+            $comment->confirmed = true;
+        }
+        $comment->save();
+        return redirect('/settings/comments');
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Comment $comment)
     {
-        //
+        return view('settings.comments.view', compact('comment'));
     }
 
     /**
@@ -78,9 +101,16 @@ class CommentsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Comment $comment)
     {
-        //
+        $this->validate(request(), [
+            'body' => 'required|min:2'
+        ]);
+
+        $comment->body = request('body');
+        $comment->save();
+
+        return redirect('/settings/comments');
     }
 
     /**
@@ -89,8 +119,10 @@ class CommentsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Comment $comment)
     {
-        //
+        $comment->delete();
+
+        return redirect('/settings/comments');
     }
 }
