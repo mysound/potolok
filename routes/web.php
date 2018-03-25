@@ -22,3 +22,9 @@ Route::post('/login', 'SessionsController@store');
 Route::get('/logout', 'SessionsController@destroy');
 
 Route::get('/settings', 'SettingsController@index');
+
+Route::get('/settings/comments', 'CommentsController@allcomm');
+Route::get('/settings/comments/{comment}/edit', 'CommentsController@edit');
+Route::put('/settings/comments/{comment}', 'CommentsController@update');
+Route::patch('/settings/comments/{comment}', 'CommentsController@publish');
+Route::delete('/settings/comments/{comment}', 'CommentsController@destroy');
