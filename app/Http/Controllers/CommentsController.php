@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Comment;
+use App\Mail\NewComment;
 use Illuminate\Http\Request;
 
 class CommentsController extends Controller
@@ -51,6 +52,8 @@ class CommentsController extends Controller
             'name' => request('name'),
             'body' => request('body')
         ]);
+
+        \Mail::to('test@example.com', 'New Comment')->send(new NewComment);
 
         return redirect('/');
     }
