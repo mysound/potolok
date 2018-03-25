@@ -7,7 +7,7 @@
 	<title>Masterche</title>
 	<link href="/css/app.css" rel="stylesheet">
 	@yield('stylesheets')
-	
+	{!! NoCaptcha::renderJs() !!}
 </head>
 <body>
 

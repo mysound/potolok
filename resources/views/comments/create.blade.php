@@ -15,6 +15,11 @@
 				<label for="body">Текст отзыва:</label>
 				<textarea id="body" name="body" class="form-control" required></textarea>
 			</div>
+
+			<div class="form-group">
+				{!! NoCaptcha::display() !!}
+			</div>			
+			
 			<div class="form-group">
 				<button type="submit" class="btn btn-primary">Оставить отзыв</button>
 			</div>
