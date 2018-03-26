@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Comment;
+use App\Block;
 use Illuminate\Http\Request;
 
 class SettingsController extends Controller
@@ -11,9 +13,17 @@ class SettingsController extends Controller
     {
         $this->middleware('auth');
     }
-    
-	public function index()
-	{
-    	return view('settings.index');
-	}
+
+    public function index()
+    {
+        $comments = Comment::where('confirmed', '0')->get();
+        $blocks = Block::all();
+    	return view('settings.index', compact('blocks', 'comments'));
+    }
+
+    public function show($id) 
+    {
+        $block = Block::find($id);
+        return view('settings.block', compact('block'));
+    }
 }
