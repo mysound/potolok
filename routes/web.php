@@ -28,3 +28,9 @@ Route::get('/settings/comments/{comment}/edit', 'CommentsController@edit');
 Route::put('/settings/comments/{comment}', 'CommentsController@update');
 Route::patch('/settings/comments/{comment}', 'CommentsController@publish');
 Route::delete('/settings/comments/{comment}', 'CommentsController@destroy');
+
+Route::get('/settings/{block}', 'SettingsController@show');
+Route::post('/settings/{block}/elements', 'ElementsController@store');
+Route::get('/settings/elements/{element}/edit', 'ElementsController@edit');
+Route::put('/settings/elements/{element}', 'ElementsController@update');
+Route::delete('/settings/elements/{element}', 'ElementsController@destroy');
