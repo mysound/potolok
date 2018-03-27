@@ -15,7 +15,7 @@
 				@foreach($carousel->elements as $element)
 					@if($loop->first)
 						<div class="item active">
-							<img src="{{ asset('img/' . $element->image) }}">
+							<img src="{{ asset('images/' . $element->image) }}">
 							<div class="container">
 								<div class="carousel-caption">
 									<h1>{{ $element->title }}</h1>
@@ -25,7 +25,7 @@
 						</div>
 					@else
 						<div class="item">
-							<img src="{{ asset('img/' . $element->image) }}">
+							<img src="{{ asset('images/' . $element->image) }}">
 							<div class="container">
 								<div class="carousel-caption">
 									<h1>{{ $element->title }}</h1>
