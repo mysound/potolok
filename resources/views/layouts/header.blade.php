@@ -2,7 +2,7 @@
 	<div class="container b-header">
 		<div class="row">
 			<div class="col-md-3 b-header__logo">
-				<a href="/"><img class="img-circle" src="/img/logo.jpg" width="140" height="140"></a>
+				<a href="/"><img class="img-circle" src="/images/logo.jpg" width="140" height="140"></a>
 			</div>
 			<div class="col-md-8 b-header__title">
 				<div class="b-header-title-first"><span class="h1">Натяжные Потолки</span></div>
