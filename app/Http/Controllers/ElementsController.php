@@ -23,12 +23,15 @@ class ElementsController extends Controller
 			'body' => 'required|min:2',
 			'image' => 'required|image'
 		]);
-
+			
 		if (request()->hasFile('image')) {
 			$image_file = request()->file('image');
 			$image = time() . '.' . $image_file->getClientOriginalExtension();
 			$location = public_path('images/' . $image);
-			Image::make($image_file)->save($location);
+			Image::make($image_file)
+				->resize(null, $block->height_image, function ($constraint) { $constraint->aspectRatio(); } )
+                ->encode('jpg',100)
+                ->save($location);
 		}
 
 		$block->addElement(request('title'), Purifier::clean(request('body')), $image);
@@ -56,7 +59,11 @@ class ElementsController extends Controller
 			$image_file = request()->file('image');
 			$image = time() . '.' . $image_file->getClientOriginalExtension();
 			$location = public_path('images/' . $image);
-			Image::make($image_file)->save($location);
+			//Image::make($image_file)->save($location);
+			Image::make($image_file)
+				->resize(null, $block->height_image, function ($constraint) { $constraint->aspectRatio(); } )
+                ->encode('jpg',100)
+                ->save($location);
 			$oldFilename = $element->image;
 			Storage::disk('images')->delete($element->image);
 			$element->image = $image;
