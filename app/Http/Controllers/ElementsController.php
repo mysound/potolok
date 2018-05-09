@@ -26,15 +26,15 @@ class ElementsController extends Controller
 			
 		if (request()->hasFile('image')) {
 			$image_file = request()->file('image');
-			$image = time() . '.' . $image_file->getClientOriginalExtension();
-			$location = public_path('images/' . $image);
-			Image::make($image_file)
+			$imagetitle = time() . '.' . $image_file->getClientOriginalExtension();
+			$picture = Image::make($image_file)
 				->resize(null, $block->height_image, function ($constraint) { $constraint->aspectRatio(); } )
-                ->encode('jpg',100)
-                ->save($location);
+                ->encode('jpg',100);
+			Storage::disk('images')->put($imagetitle, $picture);
+            $picture->destroy();
 		}
 
-		$block->addElement(request('title'), Purifier::clean(request('body')), $image);
+		$block->addElement(request('title'), Purifier::clean(request('body')), $imagetitle);
 
 		return back();
 	}
@@ -57,16 +57,14 @@ class ElementsController extends Controller
 
 		if (request()->hasFile('image')) {
 			$image_file = request()->file('image');
-			$image = time() . '.' . $image_file->getClientOriginalExtension();
-			$location = public_path('images/' . $image);
-			//Image::make($image_file)->save($location);
-			Image::make($image_file)
-				->resize(null, $block->height_image, function ($constraint) { $constraint->aspectRatio(); } )
-                ->encode('jpg',100)
-                ->save($location);
-			$oldFilename = $element->image;
+			$imagetitle = time() . '.' . $image_file->getClientOriginalExtension();
+			$picture = Image::make($image_file)
+				->resize(null, $element->block->height_image, function ($constraint) { $constraint->aspectRatio(); } )
+                ->encode('jpg',100);
 			Storage::disk('images')->delete($element->image);
-			$element->image = $image;
+            Storage::disk('images')->put($imagetitle, $picture);
+            $picture->destroy();
+			$element->image = $imagetitle;
 		}
 
 		$element->save();

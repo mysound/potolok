@@ -10,7 +10,7 @@
 		@foreach($block->elements as $element)
 			<div class="row">
 				<div class="col-md-2">
-					<img class="img-circle" src="{{ asset('images/' . $element->image) }}" width="120" height="120">
+					<img class="img-circle" src="{{ asset('storage/images/' . $element->image) }}" width="120" height="120">
 				</div>
 				<div class="col-md-8">
 					<h4>{{ $element->title }}</h4>
