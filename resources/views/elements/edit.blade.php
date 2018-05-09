@@ -36,7 +36,7 @@
 				<textarea id="body" name="body" class="form-control">{!! $element->body !!}</textarea>
 			</div>
 			<div class="form-group">
-				<img class="img-circle" src="{{ asset('images/' . $element->image) }}" width="70" height="70">
+				<img class="img-circle" src="{{ asset('storage/images/' . $element->image) }}" width="70" height="70">
 			</div>
 			<div class="form-group">
 				<label for="image">Изображение</label>

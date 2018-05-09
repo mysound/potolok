@@ -15,17 +15,17 @@
 				@foreach($carousel->elements as $element)
 					@if($loop->first)
 						<div class="item active">
-							<img src="{{ asset('images/' . $element->image) }}">
+							<img src="{{ asset('storage/images/' . $element->image) }}">
 							<div class="container">
 								<div class="carousel-caption">
 									<h1>{{ $element->title }}</h1>
-									<p>{{ $element->body }}</p>
+									<p>{!! $element->body !!}</p>
 								</div>
 							</div>
 						</div>
 					@else
 						<div class="item">
-							<img src="{{ asset('images/' . $element->image) }}">
+							<img src="{{ asset('storage/images/' . $element->image) }}">
 							<div class="container">
 								<div class="carousel-caption">
 									<h1>{{ $element->title }}</h1>
