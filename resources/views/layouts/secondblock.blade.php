@@ -5,7 +5,7 @@
 		<p>{!! $element->body !!}</p>
 	</div>
 	<div class="col-md-5 {{ is_int($loop->iteration/2) ? 'col-md-pull-7	' : ' '}}">
-		<img class="img-responsive center-block" src="{{ asset('images/' . $element->image) }}" width="500">
+		<img class="img-responsive center-block" src="{{ asset('storage/images/' . $element->image) }}" width="500">
 	</div>
 </div>
 
