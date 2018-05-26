@@ -45,7 +45,8 @@ class CommentsController extends Controller
     {
         $this->validate(request(), [
             'name' => 'required|min:2',
-            'body' => 'required|min:2'
+            'body' => 'required|min:2',
+            'g-recaptcha-response' => 'required|captcha'
         ]);
 
         Comment::create([
