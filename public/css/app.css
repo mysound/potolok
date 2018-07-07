@@ -8350,6 +8350,10 @@ button.close {
   }
 }
 
+body {
+  font-family: Century Gothic;
+}
+
 .b-header {
   background: #9bcf9e;
 }
