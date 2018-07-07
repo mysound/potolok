@@ -19,8 +19,6 @@ class ElementsController extends Controller
 	public function store(Block $block)
 	{
 		$this->validate(request(), [
-			'title' => 'required|min:2',
-			'body' => 'required|min:2',
 			'image' => 'required|image'
 		]);
 			
@@ -47,8 +45,6 @@ class ElementsController extends Controller
 	public function update(Request $request, Element $element)
 	{
 		$this->validate(request(), [
-			'title' => 'required|min:2',
-			'body' => 'required|min:2',
 			'image' => 'image'
 		]);
 

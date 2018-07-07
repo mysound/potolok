@@ -29,7 +29,7 @@
 			</div>
 			<div class="form-group">
 				<label for="title">Заголовок:</label>
-				<input type="text" class="form-control" id="title" name="title" value="{{ $element->title }}" required>
+				<input type="text" class="form-control" id="title" name="title" value="{{ $element->title }}">
 			</div>
 			<div class="form-group">
 				<label for="body">Текст:</label>
@@ -39,7 +39,7 @@
 				<img class="img-circle" src="{{ asset('storage/images/' . $element->image) }}" width="70" height="70">
 			</div>
 			<div class="form-group">
-				<label for="image">Изображение</label>
+				<label for="image">Изображение ({{ $element->block->height_image }}px)</label>
 				<input type="file" name="image" id="image">
 			</div>
 			<div class="form-group">

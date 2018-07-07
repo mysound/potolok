@@ -38,16 +38,16 @@
 
 			<div class="form-group">
 				<label for="name">Заголовок:</label>
-				<input type="text" class="form-control" id="title" name="title" required>
+				<input type="text" class="form-control" id="title" name="title" >
 			</div>
 
 			<div class="form-group">
 				<label for="body">Текст:</label>
-				<textarea id="body" name="body" class="form-control" required></textarea>
+				<textarea id="body" name="body" class="form-control"></textarea>
 			</div>
 
 			<div class="form-group">
-				<label for="image">Изображение</label>
+				<label for="image">Изображение ({{ $block->height_image }}px)</label>
 				<input type="file" name="image" id="image">
 			</div>
 

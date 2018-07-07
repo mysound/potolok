@@ -16,7 +16,7 @@ class CreateElementsTable extends Migration
         Schema::create('elements', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('block_id');
-            $table->string('title');
+            $table->string('title')->nullable();
             $table->text('body');
             $table->string('image')->nullable();
             $table->timestamps();
