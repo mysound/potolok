@@ -40,13 +40,12 @@
 	</div>
 	<div class="col-md-5 b-order text-center" style="background: #fff">
 		<h1>Честность и открытость</h1>
-		<h2>Цена</h2>
-		<h2>Качество</h2>
+		<h3>Мне важен идеальный результат</h3>
 	</div>
 	<div class="col-md-5 b-order text-center" style="background: #9bcf9e">
-		<h3 style="color: #fff">Мне важен идеальный результат</h3>
+		<h3 style="color: #fff">Задавайте любые вопросы</h3>
 	</div>
-	<div class="col-md-5 b-order text-center " style="margin-top: 10px;">
-		<h3>Задавайте любые вопросы</h3>
+	<div class="col-md-5 b-order text-center ">
+		<h3>Цена напрямую зависит от объема работ и используемых материалов</h3>
 	</div>
 </div>
