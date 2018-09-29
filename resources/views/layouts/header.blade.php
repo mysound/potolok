@@ -7,7 +7,7 @@
 			<div class="col-md-8 b-header__title">
 				<div class="b-header-title-first"><span class="h1">Натяжные Потолки</span></div>
 				<div class="b-header-title-second"><span class="h3">от Частного Мастера</span></div>
-				<div class="b-header-title-phone"><span class="h3">8-800-000-00-00</span></div><span>г.Армавир</span>
+				<div class="b-header-title-phone"><span class="h3">8-928-42-90-190</span></div><span>г.Армавир</span>
 			</div>
 			<div class="col-md-1 b-header__title">
 				@if(Auth::check())
