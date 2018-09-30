@@ -18,7 +18,7 @@
 							<img src="{{ asset('storage/images/' . $element->image) }}">
 							<div class="container">
 								<div class="carousel-caption">
-									<h1>{{ $element->title }}</h1>
+									<span class="h2">{{ $element->title }}</span>
 									<p>{!! $element->body !!}</p>
 								</div>
 							</div>
@@ -28,7 +28,7 @@
 							<img src="{{ asset('storage/images/' . $element->image) }}">
 							<div class="container">
 								<div class="carousel-caption">
-									<h1>{{ $element->title }}</h1>
+									<span class="h2">{{ $element->title }}</span>
 									<p>{{ $element->body }}</p>
 								</div>
 							</div>
@@ -38,8 +38,8 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-md-5 b-order text-center" style="background: #fff">
-		<h1>Честность и открытость</h1>
+	<div class="col-md-5 b-order text-center" style="background: #fff;">
+		<span class="h1">Честность и открытость</span>
 		<h3>Мне важен идеальный результат</h3>
 	</div>
 	<div class="col-md-5 b-order text-center" style="background: #9bcf9e">

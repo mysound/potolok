@@ -1,5 +1,9 @@
 @extends ('layouts.master')
 
+@section('title', ' - отзывы')
+@section('description', 'Установка натяжных потолков в Армавире, Лабинске по выгодным ценам от Частного Мастера. Отзывы')
+@section('keywords', 'натяжные потолки, освещение, установка, Армавир, Успенское, отзывы')
+
 @section('content')
 
 	<div class="container">
