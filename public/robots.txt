@@ -1,2 +1,6 @@
 User-agent: *
-Disallow:
+Disallow: /login/
+Disallow: /settings/
+
+Host: https://samrat-potolok.ru
+Sitemap: https://samrat-potolok.ru/sitemap.xml

@@ -8373,6 +8373,11 @@ body {
   color: #fff;
 }
 
+.b-header__title h1 {
+  margin-top: 0px;
+  margin-bottom: 4px;
+}
+
 .b-carousel__line {
   background: #e0dece;
 }

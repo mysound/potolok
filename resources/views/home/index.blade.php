@@ -1,5 +1,8 @@
 @extends ('layouts.master')
 
+@section('description', 'Устанавливаю натяжные потолки и освещение в Армавир и в близлежащих городах по выгодным ценам. Бесплатный выезд на замер. Огромный выбор!')
+@section('keywords', 'натяжные потолки, освещение, установка, недорого, цена, Армавир')
+
 @section('content')
 
 	<div class="container b-carousel__line">
@@ -7,13 +10,13 @@
 	</div>
 
 	<div class="container">
-		<div class="title_line"><h2>Потолки от Частного Мастера это:</h2></div>
+		<div class="title_line" style="margin-top:20px"><span class="h2">Потолки от Частного Мастера это:</span></div>
 
 		@include('layouts.firstblock')
 
 		<hr class="separator-line">
 
-		<div class="title_line"><h2>Вы получаете</h2></div>
+		<div class="title_line"><span class="h2">Вы получаете</span></div>
 		
 		@include('layouts.secondblock')
 
