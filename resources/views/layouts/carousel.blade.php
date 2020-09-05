@@ -38,6 +38,9 @@
 			</div>
 		</div>
 	</div>
+	<a href="https://www.instagram.com/samrat_potolok/"><div class="col-md-5 text-center">
+		<h3>Мои работы в Instagram <img class="img-circle" src="/img/instagram.png" width="40" height="40"></h3>
+	</div></a>
 	<div class="col-md-5 b-order text-center" style="background: #fff;">
 		<span class="h1">Честность и открытость</span>
 		<h3>Мне важен идеальный результат</h3>
@@ -45,7 +48,7 @@
 	<div class="col-md-5 b-order text-center" style="background: #9bcf9e">
 		<h3 style="color: #fff">Задавайте любые вопросы</h3>
 	</div>
-	<div class="col-md-5 b-order text-center ">
+	<div class="col-md-5 b-order text-center">
 		<h3>Цена напрямую зависит от объема работ и используемых материалов</h3>
 	</div>
 </div>
